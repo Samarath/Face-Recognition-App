@@ -81,7 +81,7 @@ class App extends React.Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
 
-    fetch('https://warm-fjord-23432.herokuapp.com//imageurl', {
+    fetch('https://warm-fjord-23432.herokuapp.com/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -91,7 +91,7 @@ class App extends React.Component {
        .then(repsonse => repsonse.json()) 
     .then(response => {
       if(response) {
-        fetch('https://warm-fjord-23432.herokuapp.com//image', {
+        fetch('https://warm-fjord-23432.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({

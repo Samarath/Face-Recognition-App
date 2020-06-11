@@ -39,7 +39,6 @@ class Register extends React.Component {
                   this.props.onRouteChange('home');
               }
           }) 
-          console.log(JSON.stringify({email: this.state.signInEmail, password: this.state.signInPassword})); 
     }
 
     render(){
